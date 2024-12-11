@@ -1,0 +1,21 @@
+{
+	"/": [
+		"src/routes/+page.server.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/about": [
+		"src/routes/+layout.ts"
+	],
+	"/contact": [
+		"src/routes/+layout.ts"
+	],
+	"/portfolio": [
+		"src/routes/portfolio/+page.server.ts",
+		"src/routes/+layout.ts"
+	],
+	"/[countrySlug]/[serviceSlug]": [
+		"src/routes/[countrySlug]/[serviceSlug]/+page.server.ts",
+		"src/routes/+layout.ts"
+	]
+}

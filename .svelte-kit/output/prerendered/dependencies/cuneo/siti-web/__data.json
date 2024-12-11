@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,null,{"type":"data","data":[{"country":1,"service":6},{"id":2,"name":3,"id_regione":4,"slug":5},"4","Cuneo","1","cuneo",{"id":4,"name":7,"slug":8,"is_featured":9},"Siti Web","siti-web","0"],"uses":{"params":["countrySlug","serviceSlug"]}}]}

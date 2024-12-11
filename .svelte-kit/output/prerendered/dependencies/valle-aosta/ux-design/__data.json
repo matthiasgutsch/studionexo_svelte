@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,null,{"type":"data","data":[{"country":1,"service":6},{"id":2,"name":3,"id_regione":4,"slug":5},"7","Valle d'Aosta","2","valle-aosta",{"id":4,"name":7,"slug":8,"is_featured":9},"Ux Design","ux-design","0"],"uses":{"params":["countrySlug","serviceSlug"]}}]}

@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,null,{"type":"data","data":[{"country":1,"service":6},{"id":2,"name":3,"id_regione":4,"slug":5},"68","Pescara","13","pescara",{"id":7,"name":8,"slug":9,"is_featured":10},"1","Siti Web","siti-web","0"],"uses":{"params":["countrySlug","serviceSlug"]}}]}

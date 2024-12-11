@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,null,{"type":"data","data":[{"country":1,"service":5},{"id":2,"name":3,"id_regione":2,"slug":4},"1","Torino","torino",{"id":6,"name":7,"slug":8,"is_featured":9},"2","Ux Design","ux-design","0"],"uses":{"params":["countrySlug","serviceSlug"]}}]}
