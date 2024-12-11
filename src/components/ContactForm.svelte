@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
-  import type { ContactFormData } from '../types';
+  import { createEventDispatcher } from "svelte";
+  import type { ContactFormData } from "../types";
 
-  export let submitError: string = '';
+  export let submitError: string = "";
 
   const dispatch = createEventDispatcher<{
     submit: ContactFormData;
   }>();
 
   let formData: ContactFormData = {
-    name: '',
-    surname: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    surname: "",
+    email: "",
+    phone: "",
+    message: "",
   };
 
   let errors: Partial<Record<keyof ContactFormData, string>> = {};
@@ -23,33 +23,33 @@
     let isValid = true;
 
     if (!formData.name.trim()) {
-      errors.name = 'Name is required';
+      errors.name = "Name is required";
       isValid = false;
     }
 
     if (!formData.surname.trim()) {
-      errors.surname = 'Surname is required';
+      errors.surname = "Surname is required";
       isValid = false;
     }
 
     if (!formData.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = "Email is required";
       isValid = false;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errors.email = 'Please enter a valid email address';
+      errors.email = "Please enter a valid email address";
       isValid = false;
     }
 
     if (!formData.phone.trim()) {
-      errors.phone = 'Phone number is required';
+      errors.phone = "Phone number is required";
       isValid = false;
     } else if (!/^\+?[\d\s-]{10,}$/.test(formData.phone)) {
-      errors.phone = 'Please enter a valid phone number';
+      errors.phone = "Please enter a valid phone number";
       isValid = false;
     }
 
     if (!formData.message.trim()) {
-      errors.message = 'Message is required';
+      errors.message = "Message is required";
       isValid = false;
     }
 
@@ -58,7 +58,7 @@
 
   function handleSubmit() {
     if (validateForm()) {
-      dispatch('submit', formData);
+      dispatch("submit", formData);
     }
   }
 </script>
