@@ -1,0 +1,78 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+$primary: #111111;
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  color: $primary;
+  background-color: #fff;
+}
+
+/* Layout */
+header {
+  padding: 1rem;
+  text-align: center;
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+main {
+  padding: 2rem;
+
+  h1 {
+    color: #111;
+  }
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* Utilities */
+.center {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-message {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: #059669;
+  margin-bottom: 1rem;
+}
