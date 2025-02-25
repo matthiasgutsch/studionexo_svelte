@@ -21,7 +21,7 @@
   async function fetchTemplate() {
     try {
       const response = await fetch(
-        "https://api.studionexo.com/category/slug/ux-design"
+        `https://api.studionexo.com/category/slug//${data.service.slug}`
       );
       if (!response.ok) throw new Error("Failed to load template");
 
