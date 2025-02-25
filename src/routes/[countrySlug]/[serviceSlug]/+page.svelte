@@ -10,7 +10,10 @@
   export let data: PageData;
 
   let template = ""; // Template fetched from API
+  let template_title = "";
   let content = ""; // Content generated from template
+  let content_title = ""; // Content generated from template
+
   let loading = true; // Loading state
   let errorMessage = ""; // Error message if fetching fails
 
@@ -23,9 +26,8 @@
       if (!response.ok) throw new Error("Failed to load template");
 
       const json = await response.json();
-      template =
-        json.replace_description_1 ||
-        "<h3>Welcome to [location]</h3><p>Default content here...</p>";
+      template = json.replace_description_1;
+      template_title = json.replace_title;
 
       // Check the template
       console.log("Fetched template:", template);
@@ -33,6 +35,10 @@
       // Replace placeholders with dynamic data if available
       if (data.country && data.service) {
         content = replaceText(template, {
+          location: data.country.name,
+          service: data.service.name,
+        });
+        content_title = replaceText(template_title, {
           location: data.country.name,
           service: data.service.name,
         });
@@ -76,7 +82,7 @@
   </div>
 {:else if data.country && data.service}
   <MetaTags
-    title={`${data.service.name} in ${data.country.name}`}
+    title={`${content_title}`}
     description={`Professional ${data.service.name} services in ${data.country.name}. Expert solutions tailored to your needs.`}
     canonical={canonicalUrl}
   />
