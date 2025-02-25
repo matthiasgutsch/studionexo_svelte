@@ -74,6 +74,15 @@
   }
 </script>
 
+<svelte:head>
+  <title>{`${content_title}`}</title>
+  <meta
+    name="description"
+    content="Browse our services across different locations"
+  />
+  <link rel="canonical" href={getCanonicalUrl()} />
+</svelte:head>
+
 {#if errorMessage}
   <ErrorMessage message={errorMessage} />
 {:else if loading}
