@@ -1,5 +1,8 @@
-export function replaceText(template: string, country: string, service: string): string {
-  return template
-    .replace(/\{country\}/g, country)
-    .replace(/\{service\}/g, service);
+export function replaceText(
+  template: string,
+  replacements: Record<string, string>
+): string {
+  return Object.entries(replacements).reduce((acc, [key, value]) => {
+    return acc.replace(new RegExp(`\\[${key}\\]`, "g"), value);
+  }, template);
 }
